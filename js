@@ -51,7 +51,6 @@ function findExpenseByTitle(searchString) {
     if (result) {
         console.log(`\n НАЙДЕНО`);
         console.log(`${result.title} - ${result.amount}₽ (${result.category})`);
-        console.log(`Добавить комментарий: "${result.title}" - важная трата!`);
     } else {
         console.log(`Ничего не найдено по запросу "${searchString}"`);
     }
@@ -116,15 +115,15 @@ const expenseTracker = {
     }
 };
 
-expenseTracker.addExpense('Кофе', 300, 'Еда');
-expenseTracker.addExpense('Обед', 500, 'Еда');
+expenseTracker.addExpense('Самолет', 300, 'Транспорт');
+expenseTracker.addExpense('Танк', 500, 'Вояка');
 expenseTracker.addExpense('Такси', 400, 'Транспорт');
-expenseTracker.addExpense('Кино', 800, 'Развлечения');
+expenseTracker.addExpense('Казино', 800, 'Развлечения');
 
 expenseTracker.printAll();
 expenseTracker.getTotalAmount();
-expenseTracker.getExpensesByCategory('Еда');
-expenseTracker.findExpenseByTitle('Кофе');
+expenseTracker.getExpensesByCategory('Транспорт');
+expenseTracker.findExpenseByTitle('Танк');
 expenseTracker.getCategoryStats();
 expenseTracker.deleteExpenseById(expenses[0].id);
 expenseTracker.printAll();
